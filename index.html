@@ -1,710 +1,103 @@
 <!DOCTYPE html>
-<!-- saved from url=(0253)https://4a178428-8fb7-406d-942f-0c27d3ed1543.frame.claudeusercontent.com/_f/1787733419-260c/?__frame_t=-xJIg3vq8IPMaZglXl8n_-R_.8eaa1454-ed2e-437b-9d50-343702a8cf56.cbe60a87-e6e1-4a79-b363-3af89e04d018.1787831739&__frame_v=manifest.9898276473c7738d.json -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!--<base href="/_f/1787733419-260c/">--><base href="."><script>window.__FRAME_PREAMBLE={"v":1,"capabilities":{"artifact":"artifact.Cg566fpb.js","assets":"assets.8Gk803W0.js","comments":"comments.GLuHR3zP.js","db":"db.CRhVHzSt.js","downloads":"downloads.C3GSvEDP.js","embed":"embed.CxGAyc-v.js","mcp":"mcp.Bvma3qD7.js","network":"network.B5UA9Su4.js","permissions":"permissions.BNySkLV5.js","room":"room.BMMoe2BY.js","sample":"sample.BW2Uysoh.js","self":"artifact.Cg566fpb.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.CQm3TZ9K.js","comments":"_comments.PBVy184F.js","translate":"_translate.5HCW4BJh.js"}</script><script>(function(){"use strict";var J=["light","dark","system"],Q=/^[A-Za-z0-9_-]{1,64}$/,H=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,ee=new Set(["class","hidden","value","checked"]);function te(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||ee.has(t)}var Me="http://www.w3.org/1999/xhtml",re="http://www.w3.org/2000/svg",ne=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),oe=new Set(["script","style"]);function se(e){const t=e.localName.toLowerCase();return e.namespaceURI==="http://www.w3.org/1999/xhtml"?!ne.has(t):e.namespaceURI===re?!oe.has(t):!1}var ae=new Set(["html","head","body","frameset"]);function ie(e){return e.namespaceURI==="http://www.w3.org/1999/xhtml"&&ae.has(e.localName)}function ce(e){if(e===null||typeof e!="object")return!1;const t=e;if(typeof t.target!="string"||!Q.test(t.target)||t.text!==void 0&&typeof t.text!="string")return!1;if(t.attrsSet!==void 0){if(t.attrsSet===null||typeof t.attrsSet!="object")return!1;for(const[r,n]of Object.entries(t.attrsSet))if(!H.test(r)||typeof n!="string")return!1}if(t.attrsRemoved!==void 0){if(!Array.isArray(t.attrsRemoved))return!1;for(const r of t.attrsRemoved)if(typeof r!="string"||!H.test(r))return!1}return!0}function le(e,t){if(e===null||typeof e!="object")return!1;const{seq:r,elements:n}=e;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(n)||n.length===0||n.length>64)return!1;for(let s=0;s<n.length;s++)if(!t(n[s]))return!1;return!0}function ue(e){return e===null||typeof e!="object"?!1:le(e.__frame_patch,ce)}function fe(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function pe(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function de(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const r=t.theme;return typeof r=="string"&&J.includes(r)}var A=/^[\w.-]+\.js$/;function me(e,t,r){return r?"inert":typeof t=="string"&&A.test(t)?e?[t]:"inert":e?"inert":"framed"}function he(){return{post(e,t){parent.postMessage(e,t)},on(e){const t=r=>{r.source===parent&&e(r.data,r.origin)};return addEventListener("message",t),()=>removeEventListener("message",t)}}}function _e(){return{post:()=>{},on:()=>()=>{}}}var O="__frame_scroll",ve=150,ye=310,we=160,be=3e4;function Ee(){let e=0,t=!1,r=!1,n=!1,s=0,a=null;const l=i=>{try{sessionStorage.setItem(O,JSON.stringify({y:i}))}catch{}},d=()=>{if(clearTimeout(e),a===null)return;const i=a;a=null,l(i)},v=()=>{if(t){t=!1;return}r=!0,a=scrollY,clearTimeout(e),e=setTimeout(d,ve)};try{addEventListener("scroll",v,{passive:!0}),addEventListener("pagehide",d)}catch{}const y=()=>{let i;try{i=sessionStorage.getItem(O)}catch{return null}if(i===null)return null;let m;try{m=JSON.parse(i)}catch{m=null}const u=m?.y;if(!(typeof u=="number"&&Number.isFinite(u)&&u>=0)){try{sessionStorage.removeItem(O)}catch{}return null}return u};let S=!1;const h=i=>{try{const m=scrollY;scrollTo({top:i,left:0,behavior:"instant"}),s=i,n=!0,clearTimeout(e),a=null,l(i);const u=scrollY;u!==m&&(t=!0),u!==i&&!S&&(S=!0,addEventListener("load",()=>{try{if(scrollY===u){const k=y();h(k!==null?k:s)}}catch{}},{once:!0}))}catch{}},w=()=>{try{return!!location.hash}catch{return!0}};let o=!1;const f=()=>{try{if(o||innerWidth>ye||innerHeight>we)return;o=!0;const i=Date.now(),m=()=>{try{removeEventListener("resize",m)}catch{}if(Date.now()-i>be||r||w())return;const u=y();h(u!==null?u:s)};addEventListener("resize",m)}catch{}};let _=!1,b=!1;return{restore(){if(_||(_=!0,w()))return;const i=y();i!==null&&(h(i),f())},promoted(){if(b||(b=!0,w()))return;const i=y();i!==null?(h(i),f()):n&&h(s)}}}function ge(e,t,r,n){let s=null;try{s=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:v=>v})??null}catch{}const a=window.Worker,l=a?.prototype,d=Object.freeze({Worker:a,workerOn:l?.addEventListener,workerPost:l?.postMessage,workerTerminate:l?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,policy:s,origins:t});r(e).then(v=>v?.bootTopLevel?v.bootTopLevel(d,n):n.settle()).catch(()=>n.settle())}var Oe="modulepreload",Ce=function(e){return"/"+e},je={},Ae=function(t,r,n){let s=Promise.resolve();function a(l){const d=new Event("vite:preloadError",{cancelable:!0});if(d.payload=l,window.dispatchEvent(d),!d.defaultPrevented)throw l}return s.then(l=>{for(const d of l||[])d.status==="rejected"&&a(d.reason);return t().catch(a)})},Re=window===top,q=Object.getOwnPropertyDescriptor(window,"claude"),T=me(Re,window.__FRAME_PREAMBLE?.topLevel,q?.writable===!1),C=typeof T=="object"&&T[0],p=C?_e():he();(function(){const e=Object.defineProperty,t=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let n=0;for(let s=0;s<r.length;s++){const a=r[s];try{e(t,a,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[a]}catch{}try{e(t,a,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[a]=="function"&&n++}if(n&&T==="framed")try{p.post({__frame_rtc_lockdown_failed:n},"*")}catch{}})();var Se=1e4,W=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function $(e){for(const t of W)if(t.endsWith(":*"))try{const r=new URL(e);if(`${r.protocol}//${r.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var L=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),j=window.__FRAME_PREAMBLE?.transforms,N=window.__FRAME_PREAMBLE?.comments,I=window.__FRAME_PREAMBLE?.translate;function R(e){return Ae(()=>import("/_runtime/"+e),void 0)}function K(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:D,pipe:()=>({wrap:(r,n)=>(...s)=>{try{return n(...s)}catch(a){return Promise.reject(a)}}})}}var P=null,E=null;function Y(e,t,r){try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var B=!1;function ke(e,t){const r=[];for(const n of e.elements){const s=document.querySelector(`[data-id="${n.target}"]`);if(!s){p.post({__frame_patch_miss:{seq:e.seq}},t);return}if([...Object.keys(n.attrsSet??{}),...n.attrsRemoved??[]].some(a=>!te(a))){p.post({__frame_patch_miss:{seq:e.seq}},t);return}if(n.text!==void 0&&(!se(s)||ie(s))){p.post({__frame_patch_miss:{seq:e.seq}},t);return}for(const[a,l]of Object.entries(n.attrsSet??{}))if(!G(s,a)){try{s.setAttribute(a,l)}catch{}X(s,a,l)}for(const a of n.attrsRemoved??[])G(s,a)||(s.removeAttribute(a),X(s,a,null));typeof n.text=="string"&&(s.textContent=n.text),r.push(n.target)}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:r}}))}catch{}}function X(e,t,r){if(!(e instanceof HTMLInputElement))return;const n=t.toLowerCase();n==="checked"?e.checked=r!==null:n==="value"&&e.type!=="file"&&(e.value=r??"")}function G(e,t){const r=t.toLowerCase(),n=e;return r==="data-id"||(r==="value"||r==="checked")&&(n.__artifactSecret===!0||/^(password|hidden|file)$/.test(n.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${n.autocomplete??""}`))}function V(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,B=!0):B&&(delete t.dataset.theme,t.style.colorScheme="",B=!1)}var M=new Map;function Te(){let e;const t={u:new Promise(r=>{e=r}),r:r=>{t.done=!0,e(r)},done:!1,nulled:!1};return t}function U(){for(const e of M.values())e.done||(e.nulled=!0,e.r(null))}var Le=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),D=(e,t)=>{const r=M.get(e);if(!r||r.done){r?.nulled&&E&&p.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},E);return}const n=typeof t=="function"?Object.setPrototypeOf(t,Le):Object.assign(Object.create(null),t);typeof n.then=="function"&&delete n.then,r.r(Object.freeze(n))};function Z(){const e=q?.value??{};Y(window,"claude",e);for(const t of Object.keys(L)){if(e[t]!==void 0){Y(e,t,e[t]);continue}M.set(t,Te())}if(e.use===void 0){const t=r=>{if(typeof r!="string"||!Object.hasOwn(L,r))return Promise.resolve(null);const n=M.get(r);return n?n.u:Promise.resolve(e[r]??null)};try{Object.defineProperty(e,"use",{value:t,writable:!0,configurable:!0,enumerable:!1})}catch{}}}if(T==="framed"){const e=j&&A.test(j)?R(j).catch(()=>{}):Promise.resolve(void 0),t=o=>{if(o.type==="auxclick"&&o.button!==1)return;const f=o.target,_=f&&f.closest?f.closest("a[href],area[href]"):null;if(!_)return;const b=_.getAttribute("href");if(!b)return;let i;try{i=new URL(b,document.baseURI)}catch{return}if((i.protocol==="http:"||i.protocol==="https:")&&i.origin!==location.origin){o.preventDefault();const m=(_.getAttribute("target")??"").toLowerCase(),u=o.type==="auxclick"||o.metaKey||o.ctrlKey||o.shiftKey||o.altKey||!["","_self","_top","_parent"].includes(m);p.post({__frame_nav:!0,url:i.href,newTab:u},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const r={},n=o=>{o.isTrusted&&(r.pointer=!0)},s=o=>{o.isTrusted&&(r.click=!0)};addEventListener("pointermove",n,{capture:!0,passive:!0}),addEventListener("click",s,{capture:!0,passive:!0}),e.then(o=>{o?.wireNav&&(o.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",n,!0),removeEventListener("click",s,!0),o.wireEngagement?.(r))});let a=null;try{a=Ee()}catch{}Z();let l=null,d=null,v=0;const y=p.on((o,f)=>{$(f)&&fe(o)&&(l=o.__frame_init,E=f,y(),clearTimeout(v),d?.())});p.post({__frame_connect:!0},"*");const S=new Promise(o=>{d=o,v=setTimeout(()=>{y(),o()},Se)}),h=document.readyState==="loading"?new Promise(o=>document.addEventListener("DOMContentLoaded",()=>o(),{once:!0})):Promise.resolve();h.then(()=>{try{a?.restore()}catch{}});const w={cb:null};p.on((o,f)=>{if($(f)&&pe(o)){try{a?.promoted()}catch{}w.cb?.()}}),S.then(async()=>{if(!l||!E){U();return}V(l.theme);const o=E;let f=!1,_=!1;p.on((c,x)=>{if(x!==o)return;de(c)&&V(c.__frame_theme.theme),ue(c)&&ke(c.__frame_patch,o);const g=c?.__fc_mode;g&&typeof g=="object"&&!f&&N&&A.test(N)&&(f=!0,R(N).then(z=>z.install?.(o,g.on===!0)).catch(()=>{}));const F=c?.__ft_cmd;F&&typeof F=="object"&&!_&&I&&A.test(I)&&(_=!0,R(I).then(z=>z.install?.(o,F)).catch(()=>{}))});const b=Object.keys(l.capabilities??{}).filter(c=>Object.hasOwn(L,c)).map(c=>[c,L[c]]).filter(c=>typeof c[1]=="string"&&A.test(c[1])),i=await Promise.allSettled(b.map(([,c])=>R(c))),m=await e,u=E;if(m?.buildBoot||p.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},u),m?.buildBoot)try{P=m.buildBoot(l,m.TRANSFORMS??{},{shellOrigin:u,mount:D},c=>p.post({__frame_cap_telemetry:c},u))}catch{p.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},u),P=K(l,u)}else P=K(l,u);const k=c=>p.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:c}},u),Pe=P;i.forEach((c,x)=>{const g=b[x][0];if(c.status!=="fulfilled"){k(g);return}try{c.value?.install?.(Pe)}catch{k(g)}}),U(),await h,p.post({__frame_ready:!0},E),e.then(c=>c?.installSizeReporter?.(u,w))})}else C&&(Z(),ge(C,W,R,{settle:U,mount:D}))})();</script><!-- /frame-runtime --><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
-<title>Relocation Command Center</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./css2" rel="stylesheet">
-<style>
-  /* ============ Tokens — dark-first: bare :root is the primary (dark) palette ============ */
-  :root{
-    --bg:#0B141C;
-    --surface:#121F29;
-    --surface-raised:#1A2C39;
-    --surface-hover:#20364590;
-    --border:#2B4152;
-    --border-soft:#20313f;
-    --text:#EDF2F5;
-    --text-muted:#93A7B8;
-    --text-faint:#5E7284;
-    --accent:#C98A3A;
-    --accent-strong:#E7B067;
-    --accent-soft:rgba(201,138,58,0.16);
-    --accent-text-on:#1A1104;
-    --green:#3DDC8C;
-    --green-soft:rgba(61,220,140,0.14);
-    --amber:#F2B84B;
-    --amber-soft:rgba(242,184,75,0.16);
-    --red:#F2685C;
-    --red-soft:rgba(242,104,92,0.18);
-    --shadow:0 10px 28px rgba(0,0,0,0.4);
-    --tok-c:#5E7284; --tok-s:#8FCB9B; --tok-k:#E7B067; --tok-n:#7FB6D9; --tok-f:#D9A8E0;
-  }
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg:#F5F1E8;
-      --surface:#FFFFFF;
-      --surface-raised:#FBF7EE;
-      --surface-hover:#EFE8D8a0;
-      --border:#DFD5BE;
-      --border-soft:#E9E1CD;
-      --text:#20242B;
-      --text-muted:#5B6470;
-      --text-faint:#8A8F97;
-      --accent:#A8681F;
-      --accent-strong:#8A5215;
-      --accent-soft:rgba(168,104,31,0.12);
-      --accent-text-on:#FFFBF3;
-      --green:#1C8F5A;
-      --green-soft:rgba(28,143,90,0.12);
-      --amber:#9C6B0B;
-      --amber-soft:rgba(156,107,11,0.13);
-      --red:#C43F31;
-      --red-soft:rgba(196,63,49,0.13);
-      --shadow:0 10px 24px rgba(60,50,30,0.12);
-      --tok-c:#8A8F97; --tok-s:#2F7A4E; --tok-k:#8A5215; --tok-f:#7A3F82; --tok-n:#2A6A8C;
-    }
-  }
-  :root[data-theme="light"]{
-    --bg:#F5F1E8; --surface:#FFFFFF; --surface-raised:#FBF7EE; --surface-hover:#EFE8D8a0;
-    --border:#DFD5BE; --border-soft:#E9E1CD; --text:#20242B; --text-muted:#5B6470; --text-faint:#8A8F97;
-    --accent:#A8681F; --accent-strong:#8A5215; --accent-soft:rgba(168,104,31,0.12); --accent-text-on:#FFFBF3;
-    --green:#1C8F5A; --green-soft:rgba(28,143,90,0.12); --amber:#9C6B0B; --amber-soft:rgba(156,107,11,0.13);
-    --red:#C43F31; --red-soft:rgba(196,63,49,0.13); --shadow:0 10px 24px rgba(60,50,30,0.12);
-    --tok-c:#8A8F97; --tok-s:#2F7A4E; --tok-k:#8A5215; --tok-f:#7A3F82; --tok-n:#2A6A8C;
-  }
-
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    min-height:100vh;
-  }
-  ::selection{background:var(--accent-soft);color:var(--text);}
-  a{color:var(--accent-strong);}
-  h1,h2,h3{font-family:"Big Shoulders Display",system-ui,sans-serif;text-wrap:balance;margin:0;letter-spacing:0.01em;}
-  code,pre,.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;}
-  button{font-family:inherit;}
-  :focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;border-radius:4px;}
-  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;} }
-
-  .wrap{max-width:1280px;margin:0 auto;padding:28px 24px 64px;}
-
-  /* ============ Header ============ */
-  .masthead{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:22px;}
-  .brand-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 6px;}
-  .brand-title{font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--text);}
-  .brand-sub{color:var(--text-muted);font-size:14.5px;margin-top:6px;max-width:56ch;}
-  .theme-toggle{display:flex;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:3px;}
-  .theme-toggle button{border:0;background:transparent;color:var(--text-muted);padding:6px 10px;border-radius:6px;font-size:12px;cursor:pointer;}
-  .theme-toggle button.active{background:var(--accent-soft);color:var(--accent-strong);font-weight:600;}
-
-  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
-  @media (max-width:820px){.kpi-row{grid-template-columns:repeat(2,1fr);}}
-  .kpi-tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);}
-  .kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-faint);font-weight:600;}
-  .kpi-value{font-family:"Big Shoulders Display";font-size:32px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums;line-height:1;}
-  .kpi-value small{font-size:15px;font-weight:600;color:var(--text-muted);margin-left:2px;}
-  .kpi-foot{font-size:12px;color:var(--text-muted);margin-top:6px;}
-  .kpi-foot.alert{color:var(--red);font-weight:600;}
-  .kpi-tile.anomaly-tile{border-color:var(--red);background:linear-gradient(180deg,var(--red-soft),var(--surface) 70%);}
-
-  .progress-shell{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:26px;box-shadow:var(--shadow);}
-  .progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
-  .progress-top strong{font-size:13px;}
-  .progress-top span{font-size:12px;color:var(--text-muted);}
-  .bar-track{height:10px;border-radius:999px;background:var(--border-soft);overflow:hidden;}
-  .bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-strong));width:0;transition:width 1s cubic-bezier(.2,.8,.2,1);}
-
-  /* ============ Tabs ============ */
-  .tabbar{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:22px;overflow-x:auto;}
-  .tabbtn{background:transparent;border:0;padding:12px 16px;font-size:14px;font-weight:600;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s;}
-  .tabbtn:hover{color:var(--text);}
-  .tabbtn.active{color:var(--accent-strong);border-bottom-color:var(--accent-strong);}
-  .tabpanel{display:none;}
-  .tabpanel.active{display:block;animation:fadein .25s ease;}
-  @keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
-
-  /* ============ Kanban ============ */
-  .board-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:16px;}
-  .region-filter{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:3px;}
-  .region-filter button{border:0;background:transparent;padding:7px 14px;border-radius:6px;font-size:13px;font-weight:600;color:var(--text-muted);cursor:pointer;}
-  .region-filter button.active{background:var(--accent);color:var(--accent-text-on);}
-  .board-legend{display:flex;gap:14px;font-size:12px;color:var(--text-muted);flex-wrap:wrap;}
-  .board-legend span{display:inline-flex;align-items:center;gap:5px;}
-  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
-  .dot.green{background:var(--green);} .dot.amber{background:var(--amber);} .dot.red{background:var(--red);}
-
-  .board{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;align-items:flex-start;}
-  .column{background:var(--surface);border:1px solid var(--border);border-radius:12px;min-width:260px;max-width:260px;flex:0 0 auto;}
-  .column-head{padding:12px 14px;border-bottom:1px solid var(--border-soft);}
-  .column-title{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
-  .column-count{font-size:11px;color:var(--text-faint);margin-top:2px;}
-  .column-body{padding:10px;display:flex;flex-direction:column;gap:10px;min-height:60px;}
-  .column-empty{font-size:12px;color:var(--text-faint);text-align:center;padding:18px 6px;border:1px dashed var(--border);border-radius:8px;}
-
-  .card{background:var(--surface-raised);border:1px solid var(--border-soft);border-left:3px solid var(--border);border-radius:9px;padding:11px 12px;box-shadow:var(--shadow);}
-  .card.status-on-track{border-left-color:var(--green);}
-  .card.status-at-risk{border-left-color:var(--amber);}
-  .card.status-overdue{border-left-color:var(--red);}
-  .card-top{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:6px;}
-  .region-pill{font-size:10px;font-weight:700;letter-spacing:0.04em;padding:2px 7px;border-radius:5px;}
-  .region-pill.SG{background:var(--green-soft);color:var(--green);}
-  .region-pill.ML{background:var(--amber-soft);color:var(--amber);}
-  .region-pill.UAE{background:var(--accent-soft);color:var(--accent-strong);}
-  .card-pax{font-size:12px;color:var(--text-muted);font-weight:600;}
-  .card-title{font-size:13.5px;font-weight:600;margin-bottom:6px;}
-  .card-vendor{font-size:11.5px;color:var(--text-faint);margin-bottom:8px;}
-  .card-budget-row{display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);margin-bottom:3px;font-variant-numeric:tabular-nums;}
-  .mini-bar-track{height:5px;background:var(--border-soft);border-radius:999px;overflow:hidden;margin-bottom:8px;}
-  .mini-bar-fill{height:100%;border-radius:999px;background:var(--accent);}
-  .mini-bar-fill.over{background:var(--red);}
-  .card-deadline{display:flex;align-items:center;justify-content:space-between;font-size:11.5px;}
-  .status-chip{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:0.02em;}
-  .status-chip.status-on-track{background:var(--green-soft);color:var(--green);}
-  .status-chip.status-at-risk{background:var(--amber-soft);color:var(--amber);}
-  .status-chip.status-overdue{background:var(--red-soft);color:var(--red);}
-  .anomaly-flag{margin-top:8px;padding:7px 8px;background:var(--red-soft);border:1px solid var(--red);border-radius:6px;font-size:11px;color:var(--text);line-height:1.4;}
-  .anomaly-flag b{color:var(--red);}
-
-  /* ============ Competency tab ============ */
-  .section-heading{margin-bottom:14px;}
-  .section-heading h2{font-size:22px;font-weight:700;}
-  .section-heading p{color:var(--text-muted);font-size:13.5px;margin-top:4px;max-width:70ch;}
-  .competency-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:34px;}
-  @media (max-width:760px){.competency-grid{grid-template-columns:1fr;}}
-  .comp-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow);}
-  .comp-card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
-  .comp-icon{width:34px;height:34px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-strong);}
-  .comp-card h3{font-size:16px;font-weight:700;font-family:"IBM Plex Sans";}
-  .comp-metric{font-family:"Big Shoulders Display";font-size:28px;font-weight:800;color:var(--accent-strong);line-height:1;margin:6px 0 8px;}
-  .comp-card p{font-size:13px;color:var(--text-muted);line-height:1.55;margin:0;}
-
-  .impact-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);}
-  table.impact{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px;}
-  table.impact th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-faint);padding:12px 16px;border-bottom:1px solid var(--border);background:var(--surface-raised);}
-  table.impact td{padding:12px 16px;border-bottom:1px solid var(--border-soft);}
-  table.impact tr:last-child td{border-bottom:0;}
-  table.impact td.metric{font-weight:600;}
-  table.impact td.improve{color:var(--green);font-weight:700;font-variant-numeric:tabular-nums;}
-  .num{font-variant-numeric:tabular-nums;}
-
-  /* ============ Architecture tab ============ */
-  .flow{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:34px;}
-  .flow-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:100%;}
-  .flow-node{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;text-align:center;min-width:150px;box-shadow:var(--shadow);}
-  .flow-node .fn-label{font-size:12.5px;font-weight:600;}
-  .flow-node .fn-sub{font-size:10.5px;color:var(--text-faint);margin-top:2px;}
-  .flow-node.engine{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft),var(--surface) 75%);}
-  .flow-node.engine .fn-label{color:var(--accent-strong);}
-  .flow-arrow{color:var(--text-faint);font-size:20px;line-height:1;}
-  .flow-arrow.down{transform:none;}
-
-  .code-panel{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);}
-  .code-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--surface-raised);}
-  .code-tabbtn{background:transparent;border:0;padding:10px 16px;font-size:12.5px;font-family:"IBM Plex Mono";color:var(--text-muted);cursor:pointer;border-right:1px solid var(--border-soft);}
-  .code-tabbtn.active{color:var(--accent-strong);background:var(--surface);font-weight:600;}
-  .code-body{overflow-x:auto;}
-  .code-body pre{margin:0;padding:18px 20px;font-size:12.5px;line-height:1.65;}
-  .tok-c{color:var(--tok-c);font-style:italic;}
-  .tok-s{color:var(--tok-s);}
-  .tok-k{color:var(--tok-k);}
-  .tok-n{color:var(--tok-n);}
-  .tok-f{color:var(--tok-f);}
-
-  .foot-note{margin-top:40px;padding-top:16px;border-top:1px solid var(--border-soft);font-size:12px;color:var(--text-faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-</style>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relocation Command Center</title>
+    <!-- 引入 PapaParse 用來在前端解析 Google 試算表的 CSV -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        :root{
+            --bg:#0B141C; --surface:#121F29; --surface-raised:#1A2C39; --border:#2B4152;
+            --text:#EDF2F5; --text-muted:#93A7B8; --accent:#C98A3A; --accent-strong:#E7B067;
+            --green:#3DDC8C; --green-soft:rgba(61,220,140,0.14);
+            --amber:#F2B84B; --red:#F2685C; --shadow:0 10px 28px rgba(0,0,0,0.4);
+        }
+        *{box-sizing:border-box;}
+        body{background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",system-ui,sans-serif;margin:0;padding:28px 24px;}
+        .wrap{max-width:1280px;margin:0 auto;}
+        .masthead{margin-bottom:24px;}
+        .brand-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px;}
+        .brand-title{font-size:36px;font-weight:800;margin:0;}
+        .brand-sub{color:var(--text-muted);font-size:14px;margin-top:6px;}
+        
+        .card-container{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow);margin-top:20px;}
+        table{width:100%;border-collapse:collapse;margin-top:15px;font-size:14px;}
+        th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{color:var(--text-muted);font-size:12px;text-transform:uppercase;letter-spacing:0.05em;background:var(--surface-raised);}
+        .badge{padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700;}
+        .badge-sg{background:var(--green-soft);color:var(--green);}
+        .loading{text-align:center;padding:40px;color:var(--text-muted);font-size:16px;}
+    </style>
+</head>
+<body>
 
 <div class="wrap">
-
-  <div class="masthead">
-    <div>
-      <p class="brand-eyebrow">GM-Robot · Tech-PMO Command Center</p>
-      <h1 class="brand-title">Relocation Blitz — SG · ML · UAE</h1>
-      <p class="brand-sub">122-headcount multi-region relocation, 2-month deadline. Live pipeline, compliance and cost-efficiency telemetry.</p>
-    </div>
-    <div class="theme-toggle" role="group" aria-label="Theme">
-      <button type="button" data-theme-btn="system" class="active">Auto</button>
-      <button type="button" data-theme-btn="light">Light</button>
-      <button type="button" data-theme-btn="dark">Dark</button>
-    </div>
-  </div>
-
-  <div class="kpi-row" id="kpiRow"><div class="kpi-tile"><div class="kpi-label">Total Headcount</div><div class="kpi-value">122<small>pax</small></div><div class="kpi-foot">SG 30 · ML 80 · UAE 12</div></div><div class="kpi-tile"><div class="kpi-label">Overall Progress</div><div class="kpi-value">82<small>%</small></div><div class="kpi-foot">Weighted across pipeline stages</div></div><div class="kpi-tile"><div class="kpi-label">Budget Utilization</div><div class="kpi-value">86<small>%</small></div><div class="kpi-foot">$178,980 of $207,977</div></div><div class="kpi-tile anomaly-tile"><div class="kpi-label">Active Anomalies</div><div class="kpi-value">3</div><div class="kpi-foot alert">Compliance + budget flags open</div></div></div>
-
-  <div class="progress-shell">
-    <div class="progress-top">
-      <strong>Overall relocation progress</strong>
-      <span id="progressLabel">82% complete · 122 of 122 accounted for across the pipeline</span>
-    </div>
-    <div class="bar-track"><div class="bar-fill" id="progressFill" style="width: 82.1%;"></div></div>
-  </div>
-
-  <div class="tabbar" role="tablist">
-    <button class="tabbtn active" data-tab="board" role="tab" aria-selected="true">🗂️ Jira / Kanban Board</button>
-    <button class="tabbtn" data-tab="matrix" role="tab" aria-selected="false">🏗️ PMO Competency Matrix</button>
-    <button class="tabbtn" data-tab="arch" role="tab" aria-selected="false">💻 GM-Robot Architecture</button>
-  </div>
-
-  <!-- TAB 1: KANBAN -->
-  <section class="tabpanel active" id="panel-board">
-    <div class="board-controls">
-      <div class="region-filter" id="regionFilter">
-        <button data-region="All" class="">All</button>
-        <button data-region="SG" class="active">SG · 30</button>
-        <button data-region="ML">ML · 80</button>
-        <button data-region="UAE">UAE · 12</button>
-      </div>
-      <div class="board-legend">
-        <span><span class="dot green"></span> On track</span>
-        <span><span class="dot amber"></span> At risk</span>
-        <span><span class="dot red"></span> Overdue / anomaly</span>
-      </div>
-    </div>
-    <div class="board" id="board"><div class="column"><div class="column-head"><div class="column-title">Veremark Pending</div><div class="column-count">1 pax · 1 batch</div></div><div class="column-body"><div class="card status-at-risk"><div class="card-top"><span class="region-pill SG">SG</span><span class="card-pax">1 pax</span></div><div class="card-title">Veremark Pending</div><div class="card-vendor">Veremark APAC</div><div class="card-budget-row"><span>$300 / $700</span><span>43%</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:43%"></div></div><div class="card-deadline"><span>Due in 1d</span><span class="status-chip status-at-risk">At Risk</span></div></div></div></div><div class="column"><div class="column-head"><div class="column-title">Veremark Completed</div><div class="column-count">2 pax · 1 batch</div></div><div class="column-body"><div class="card status-overdue"><div class="card-top"><span class="region-pill SG">SG</span><span class="card-pax">2 pax</span></div><div class="card-title">Veremark Completed</div><div class="card-vendor">Veremark APAC</div><div class="card-budget-row"><span>$1,450 / $1,500</span><span>97%</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:97%"></div></div><div class="card-deadline"><span>1d overdue</span><span class="status-chip status-overdue">Overdue</span></div><div class="anomaly-flag"><b>⚠ Anomaly —</b> Reference-check discrepancy on prior employment — escalated to Legal for manual review.</div></div></div></div><div class="column"><div class="column-head"><div class="column-title">EP / RC Submission</div><div class="column-count">4 pax · 1 batch</div></div><div class="column-body"><div class="card status-at-risk"><div class="card-top"><span class="region-pill SG">SG</span><span class="card-pax">4 pax</span></div><div class="card-title">EP / RC Submission</div><div class="card-vendor">Rikvin Immigration Advisory</div><div class="card-budget-row"><span>$4,100 / $5,200</span><span>79%</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:79%"></div></div><div class="card-deadline"><span>Due in 3d</span><span class="status-chip status-at-risk">At Risk</span></div></div></div></div><div class="column"><div class="column-head"><div class="column-title">EP / RC Approval</div><div class="column-count">5 pax · 1 batch</div></div><div class="column-body"><div class="card status-on-track"><div class="card-top"><span class="region-pill SG">SG</span><span class="card-pax">5 pax</span></div><div class="card-title">EP / RC Approval</div><div class="card-vendor">Ministry of Manpower (MOM)</div><div class="card-budget-row"><span>$6,650 / $7,000</span><span>95%</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:95%"></div></div><div class="card-deadline"><span>Due in 4d</span><span class="status-chip status-on-track">On Track</span></div></div></div></div><div class="column"><div class="column-head"><div class="column-title">Entry</div><div class="column-count">18 pax · 1 batch</div></div><div class="column-body"><div class="card status-on-track"><div class="card-top"><span class="region-pill SG">SG</span><span class="card-pax">18 pax</span></div><div class="card-title">Entry (SG)</div><div class="card-vendor">Internal Mobility Team</div><div class="card-budget-row"><span>$27,000 / $27,000</span><span>100%</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:100%"></div></div><div class="card-deadline"><span>Due in 5d</span><span class="status-chip status-on-track">On Track</span></div></div></div></div></div>
-  </section>
-
-  <!-- TAB 2: COMPETENCY MATRIX -->
-  <section class="tabpanel" id="panel-matrix">
-    <div class="section-heading">
-      <h2>PMO Core Competency Matrix</h2>
-      <p>What the blitz demonstrates, mapped to the operating disciplines behind it.</p>
-    </div>
-    <div class="competency-grid" id="compGrid"><div class="comp-card"><div class="comp-card-head"><div class="comp-icon">⚡</div><h3>Strategic Execution &amp; Speed</h3></div><div class="comp-metric">122 → 3 regions, 60 days</div><p>Full relocation across Singapore, Malaysia and the UAE inside a strict 2-month deadline, cutting the Time-to-Productiveness gap by 50% versus baseline onboarding.</p></div><div class="comp-card"><div class="comp-card-head"><div class="comp-icon">🛡</div><h3>Compliance &amp; Risk Mitigation</h3></div><div class="comp-metric">100% compliant · 0 penalties</div><p>Full legal, visa (EP / Residence Card) and labor compliance sustained across three jurisdictions, with zero regulatory penalties incurred to date.</p></div><div class="comp-card"><div class="comp-card-head"><div class="comp-icon">🔗</div><h3>Cross-Functional Governance</h3></div><div class="comp-metric">3 teams · 4 vendor categories</div><p>Single coordination layer across HR, Legal and Finance internally, and lawyers, landlords, immigration agents and background-check vendors externally.</p></div><div class="comp-card"><div class="comp-card-head"><div class="comp-icon">🤖</div><h3>Data-Driven Automation (PMO 2.0)</h3></div><div class="comp-metric">-40% admin overhead</div><p>Python / SQL / Notion automation replaces manual status chasing — cutting administrative overhead and tracking costs by 40% across the program.</p></div></div>
-
-    <div class="section-heading">
-      <h2>Cost-Efficiency Impact Summary</h2>
-      <p>Baseline manual process vs. this cycle, run on GM-Robot / PMO 2.0 automation.</p>
-    </div>
-    <div class="impact-table-wrap">
-      <table class="impact">
-        <thead><tr><th>Metric</th><th>Manual baseline</th><th>This blitz (PMO 2.0)</th><th>Delta</th></tr></thead>
-        <tbody id="impactBody"><tr><td class="metric">Time-to-Productiveness (new hire)</td><td class="num">46 days</td><td class="num">23 days</td><td class="improve">-50%</td></tr><tr><td class="metric">PMO admin &amp; tracking overhead / week</td><td class="num">62 hrs</td><td class="num">37 hrs</td><td class="improve">-40%</td></tr><tr><td class="metric">Manual status reporting / region / week</td><td class="num">9 hrs</td><td class="num">Automated (real-time Notion sync)</td><td class="improve">-100%</td></tr><tr><td class="metric">Compliance penalty incidents</td><td class="num">2–3 per cycle (benchmark)</td><td class="num">0</td><td class="improve">Zero incidents</td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- TAB 3: ARCHITECTURE -->
-  <section class="tabpanel" id="panel-arch">
-    <div class="section-heading">
-      <h2>GM-Robot System Architecture</h2>
-      <p>External intake → automated compliance &amp; budget checks → live reporting and escalation.</p>
-    </div>
-    <div class="flow">
-      <div class="flow-row">
-        <div class="flow-node"><div class="fn-label">HR Systems</div><div class="fn-sub">Roster &amp; org data</div></div>
-        <div class="flow-node"><div class="fn-label">Immigration Lawyers</div><div class="fn-sub">EP / Residence Card filings</div></div>
-        <div class="flow-node"><div class="fn-label">Landlords / Vendors</div><div class="fn-sub">Housing &amp; logistics</div></div>
-        <div class="flow-node"><div class="fn-label">Veremark</div><div class="fn-sub">Background checks</div></div>
-      </div>
-      <div class="flow-arrow down">↓</div>
-      <div class="flow-row">
-        <div class="flow-node engine"><div class="fn-label">Python Automation Engine</div><div class="fn-sub">Compliance check · Budget anomaly detection</div></div>
-      </div>
-      <div class="flow-arrow down">↓</div>
-      <div class="flow-row">
-        <div class="flow-node"><div class="fn-label">Notion Dashboard</div><div class="fn-sub">Live PMO tracker, synced per run</div></div>
-        <div class="flow-node"><div class="fn-label">Slack Escalation</div><div class="fn-sub">#relocation-blitz-alerts</div></div>
-      </div>
+    <div class="masthead">
+        <p class="brand-eyebrow">GM-Robot · Tech-PMO Command Center</p>
+        <h1 class="brand-title">Relocation Blitz — Live Sync Dashboard</h1>
+        <p class="brand-sub">即時同步 Google 試算表（RELOCATION PROJECT）之 122 人專案追蹤清單。</p>
     </div>
 
-    <div class="code-panel">
-      <div class="code-tabs" id="codeTabs">
-        <button class="code-tabbtn active" data-file="compliance">compliance_check.py</button>
-        <button class="code-tabbtn" data-file="budget">budget_anomaly.py</button>
-      </div>
-      <div class="code-body"><pre id="codeOutput"><span class="tok-s">""</span>"
-GM-Robot :: compliance_check.py
-Cross-checks HR + Lawyer feeds against statutory visa/labor deadlines.
-Escalates breaches to Slack <span class="tok-k">and</span> syncs live status to Notion.
-<span class="tok-s">""</span>"
- 
-<span class="tok-k">import</span> pandas <span class="tok-k">as</span> pd
-<span class="tok-k">from</span> datetime <span class="tok-k">import</span> date
-<span class="tok-k">from</span> notion_client <span class="tok-k">import</span> Client <span class="tok-k">as</span> NotionClient
-<span class="tok-k">from</span> slack_sdk <span class="tok-k">import</span> WebClient <span class="tok-k">as</span> SlackClient
- 
-STAGE_SLA_DAYS = {
-    <span class="tok-s">"Entity Card Setup"</span>: <span class="tok-n">10</span>,
-    <span class="tok-s">"Veremark Pending"</span>: <span class="tok-n">5</span>,
-    <span class="tok-s">"Veremark Completed"</span>: <span class="tok-n">3</span>,
-    <span class="tok-s">"EP / RC Submission"</span>: <span class="tok-n">7</span>,
-    <span class="tok-s">"EP / RC Approval"</span>: <span class="tok-n">10</span>,
-}
- 
-notion = <span class="tok-f">NotionClient</span>(auth=SECRETS[<span class="tok-s">"NOTION_TOKEN"</span>])
-slack = <span class="tok-f">SlackClient</span>(token=SECRETS[<span class="tok-s">"SLACK_BOT_TOKEN"</span>])
- 
- 
-<span class="tok-k">def</span> <span class="tok-f">load_source_feeds</span>():
-    <span class="tok-s">""</span><span class="tok-s">"Merge HR roster, lawyer tracker, and Veremark export into one frame."</span><span class="tok-s">""</span>
-    hr = pd.<span class="tok-f">read_csv</span>(<span class="tok-s">"feeds/hr_roster.csv"</span>)
-    legal = pd.<span class="tok-f">read_csv</span>(<span class="tok-s">"feeds/lawyer_tracker.csv"</span>)
-    veremark = pd.<span class="tok-f">read_csv</span>(<span class="tok-s">"feeds/veremark_export.csv"</span>)
-    merged = hr.<span class="tok-f">merge</span>(legal, on=<span class="tok-s">"employee_id"</span>, how=<span class="tok-s">"left"</span>)
-    merged = merged.<span class="tok-f">merge</span>(veremark, on=<span class="tok-s">"employee_id"</span>, how=<span class="tok-s">"left"</span>)
-    <span class="tok-k">return</span> merged
- 
- 
-<span class="tok-k">def</span> <span class="tok-f">flag_breaches</span>(df: pd.DataFrame) -&gt; pd.DataFrame:
-    <span class="tok-s">""</span><span class="tok-s">"Mark any case that has exceeded its stage SLA."</span><span class="tok-s">""</span>
-    today = date.<span class="tok-f">today</span>()
-    df[<span class="tok-s">"days_in_stage"</span>] = (today - pd.<span class="tok-f">to_datetime</span>(df[<span class="tok-s">"stage_entered_on"</span>]).dt.date).dt.days
-    df[<span class="tok-s">"sla_days"</span>] = df[<span class="tok-s">"stage"</span>].<span class="tok-f">map</span>(STAGE_SLA_DAYS)
-    df[<span class="tok-s">"breach"</span>] = df[<span class="tok-s">"days_in_stage"</span>] &gt; df[<span class="tok-s">"sla_days"</span>]
-    <span class="tok-k">return</span> df
- 
- 
-<span class="tok-k">def</span> <span class="tok-f">escalate</span>(breaches: pd.DataFrame) -&gt; <span class="tok-k">None</span>:
-    <span class="tok-k">for</span> _, row <span class="tok-k">in</span> breaches.<span class="tok-f">iterrows</span>():
-        message = (
-            f<span class="tok-s">":rotating_light: *{row['region']}* — {row['employee_name']} "</span>
-            f<span class="tok-s">"stuck at *{row['stage']}* for {row['days_in_stage']}d "</span>
-            f<span class="tok-s">"(SLA {row['sla_days']}d). Owner: {row['vendor']}"</span>
-        )
-        slack.<span class="tok-f">chat_postMessage</span>(channel=<span class="tok-s">"#relocation-blitz-alerts"</span>, text=message)
- 
- 
-<span class="tok-k">def</span> <span class="tok-f">sync_to_notion</span>(df: pd.DataFrame) -&gt; <span class="tok-k">None</span>:
-    <span class="tok-k">for</span> _, row <span class="tok-k">in</span> df.<span class="tok-f">iterrows</span>():
-        notion.pages.<span class="tok-f">update</span>(
-            page_id=row[<span class="tok-s">"notion_page_id"</span>],
-            properties={
-                <span class="tok-s">"Stage"</span>: {<span class="tok-s">"select"</span>: {<span class="tok-s">"name"</span>: row[<span class="tok-s">"stage"</span>]}},
-                <span class="tok-s">"Compliance"</span>: {<span class="tok-s">"select"</span>: {<span class="tok-s">"name"</span>: <span class="tok-s">"Breach"</span> <span class="tok-k">if</span> row[<span class="tok-s">"breach"</span>] <span class="tok-k">else</span> <span class="tok-s">"OK"</span>}},
-            },
-        )
- 
- 
-<span class="tok-k">def</span> <span class="tok-f">run</span>() -&gt; <span class="tok-k">None</span>:
-    df = <span class="tok-f">flag_breaches</span>(<span class="tok-f">load_source_feeds</span>())
-    <span class="tok-f">escalate</span>(df[df[<span class="tok-s">"breach"</span>]])
-    <span class="tok-f">sync_to_notion</span>(df)
-    <span class="tok-f">print</span>(f<span class="tok-s">"Checked {len(df)} cases — {df['breach'].sum()} breach(es) escalated."</span>)
- 
- 
-<span class="tok-k">if</span> __name__ == <span class="tok-s">"__main__"</span>:
-    <span class="tok-f">run</span>()
- </pre></div>
+    <div class="card-container">
+        <h3>📊 移居專案即時清單</h3>
+        <div id="loading" class="loading">正在從 Google 試算表載入最新資料...</div>
+        <div style="overflow-x:auto;">
+            <table id="data-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>員工編號</th>
+                        <th>姓名</th>
+                        <th>區域</th>
+                        <th>目前狀態</th>
+                        <th>預算配置</th>
+                        <th>已花費</th>
+                        <th>預定抵達日</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- 動態載入資料 -->
+                </tbody>
+            </table>
+        </div>
     </div>
-  </section>
-
-  <div class="foot-note">
-    <span>GM-Robot PMO 2.0 · Relocation Blitz Command Center</span>
-    <span id="asOfLine">As of August 26, 2026</span>
-  </div>
 </div>
 
 <script>
-(function(){
-  "use strict";
+    // 您提供的最新 Google 試算表公開 CSV 連結
+    const gsheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUem3z16ko71Gyz_80gTFiw7C_O9UkoBcJP8nAWabx1ikg23ujAUlEwyVTr4s-rguZ1DKbuDVkZB8c/pub?output=csv";
 
-  var TODAY = new Date(2026, 7, 26); // 26 Aug 2026
+    Papa.parse(gsheetCsvUrl, {
+        download: true,
+        header: true,
+        complete: function(results) {
+            const data = results.data;
+            const tbody = document.getElementById("table-body");
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("data-table").style.display = "table";
 
-  var STAGE_ORDER = ["Entity Card Setup","Veremark Pending","Veremark Completed","EP / RC Submission","EP / RC Approval","Entry"];
-  var STAGE_WEIGHT = {
-    "Entity Card Setup": 10, "Veremark Pending": 25, "Veremark Completed": 45,
-    "EP / RC Submission": 65, "EP / RC Approval": 85, "Entry": 100
-  };
-  var STAGE_ONLY_UAE = "Entity Card Setup";
-  var CONTINGENCY_RATE = 0.15;
-
-  var CARDS = [
-    {region:"SG", stage:"Veremark Pending", count:1, allocated:700, spent:300, deadline:"2026-08-27", vendor:"Veremark APAC", status:"at-risk"},
-    {region:"SG", stage:"Veremark Completed", count:2, allocated:1500, spent:1450, deadline:"2026-08-25", vendor:"Veremark APAC", status:"overdue", anomaly:true, note:"Reference-check discrepancy on prior employment — escalated to Legal for manual review."},
-    {region:"SG", stage:"EP / RC Submission", count:4, allocated:5200, spent:4100, deadline:"2026-08-29", vendor:"Rikvin Immigration Advisory", status:"at-risk"},
-    {region:"SG", stage:"EP / RC Approval", count:5, allocated:7000, spent:6650, deadline:"2026-08-30", vendor:"Ministry of Manpower (MOM)", status:"on-track"},
-    {region:"SG", stage:"Entry", count:18, allocated:27000, spent:27000, deadline:"2026-08-31", vendor:"Internal Mobility Team", status:"on-track"},
-
-    {region:"ML", stage:"Veremark Pending", count:5, allocated:3500, spent:1200, deadline:"2026-08-28", vendor:"Veremark APAC", status:"at-risk"},
-    {region:"ML", stage:"Veremark Completed", count:8, allocated:6800, spent:6500, deadline:"2026-08-29", vendor:"Veremark APAC", status:"on-track"},
-    {region:"ML", stage:"EP / RC Submission", count:12, allocated:15600, spent:20280, deadline:"2026-08-28", vendor:"AsiaEmploy Corporate Services", status:"at-risk", anomaly:true, note:"Agency fee variance vs. contracted rate — 30% over allocation, flagged by GM-Robot z-score check."},
-    {region:"ML", stage:"EP / RC Approval", count:15, allocated:21000, spent:19950, deadline:"2026-08-30", vendor:"Immigration Dept. of Malaysia", status:"on-track"},
-    {region:"ML", stage:"Entry", count:40, allocated:62000, spent:62000, deadline:"2026-08-31", vendor:"Internal Mobility Team", status:"on-track"},
-
-    {region:"UAE", stage:"Entity Card Setup", count:1, allocated:9000, spent:9600, deadline:"2026-08-20", vendor:"Gulf Nexus Business Setup", status:"overdue", anomaly:true, note:"Free-zone trade-license renewal delayed 6 days — blocking downstream Residence Card filing."},
-    {region:"UAE", stage:"Veremark Pending", count:1, allocated:900, spent:300, deadline:"2026-08-29", vendor:"Veremark MENA", status:"on-track"},
-    {region:"UAE", stage:"Veremark Completed", count:1, allocated:950, spent:900, deadline:"2026-08-29", vendor:"Veremark MENA", status:"on-track"},
-    {region:"UAE", stage:"EP / RC Submission", count:2, allocated:3400, spent:2700, deadline:"2026-08-30", vendor:"Gulf Nexus Business Setup", status:"on-track"},
-    {region:"UAE", stage:"EP / RC Approval", count:2, allocated:3800, spent:3550, deadline:"2026-08-31", vendor:"GDRFA Dubai", status:"on-track"},
-    {region:"UAE", stage:"Entry", count:5, allocated:12500, spent:12500, deadline:"2026-08-31", vendor:"Internal Mobility Team", status:"on-track"}
-  ];
-
-  var REGION_TOTALS = {SG:30, ML:80, UAE:12};
-  var TOTAL_HEADCOUNT = 122;
-
-  function fmtUSD(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
-  function daysBetween(a,b){ return Math.round((a-b)/86400000); }
-
-  function computeProgress(){
-    var sum = 0;
-    CARDS.forEach(function(c){ sum += c.count * STAGE_WEIGHT[c.stage]; });
-    return sum / TOTAL_HEADCOUNT;
-  }
-  function computeBudget(){
-    var allocated=0, spent=0;
-    CARDS.forEach(function(c){ allocated+=c.allocated; spent+=c.spent; });
-    return { allocated: allocated*(1+CONTINGENCY_RATE), spent: spent };
-  }
-  function computeAnomalies(){ return CARDS.filter(function(c){return c.anomaly;}); }
-
-  function renderKPIs(){
-    var progress = computeProgress();
-    var budget = computeBudget();
-    var anomalies = computeAnomalies();
-    var util = (budget.spent/budget.allocated*100);
-
-    var tiles = [
-      { label:"Total Headcount", value:TOTAL_HEADCOUNT, unit:"pax", foot:"SG 30 · ML 80 · UAE 12" },
-      { label:"Overall Progress", value:progress.toFixed(0), unit:"%", foot:"Weighted across pipeline stages" },
-      { label:"Budget Utilization", value:util.toFixed(0), unit:"%", foot:fmtUSD(budget.spent)+" of "+fmtUSD(budget.allocated) },
-      { label:"Active Anomalies", value:anomalies.length, unit:"", foot:anomalies.length? "Compliance + budget flags open":"All clear", alert:true }
-    ];
-    var row = document.getElementById("kpiRow");
-    row.innerHTML = tiles.map(function(t){
-      return '<div class="kpi-tile'+(t.alert&&anomalies.length?' anomaly-tile':'')+'">'+
-        '<div class="kpi-label">'+t.label+'</div>'+
-        '<div class="kpi-value">'+t.value+(t.unit?'<small>'+t.unit+'</small>':'')+'</div>'+
-        '<div class="kpi-foot'+(t.alert&&anomalies.length?' alert':'')+'">'+t.foot+'</div>'+
-      '</div>';
-    }).join("");
-
-    document.getElementById("progressFill").style.width = progress.toFixed(1)+"%";
-    document.getElementById("progressLabel").textContent = progress.toFixed(0)+"% complete · 122 of 122 accounted for across the pipeline";
-    document.getElementById("asOfLine").textContent = "As of "+TODAY.toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
-  }
-
-  function statusLabel(s){ return s==="on-track"?"On Track":s==="at-risk"?"At Risk":"Overdue"; }
-
-  function renderBoard(filter){
-    var stages = STAGE_ORDER.filter(function(s){
-      if(s===STAGE_ONLY_UAE) return filter==="All" || filter==="UAE";
-      return true;
+            let html = "";
+            data.forEach(row => {
+                if(row.EmployeeID) { // 過濾空行
+                    html += `<tr>
+                        <td><strong>${row.EmployeeID || ''}</strong></td>
+                        <td>${row.EmployeeName || ''}</td>
+                        <td><span class="badge badge-sg">${row.Region || ''}</span></td>
+                        <td>${row.Status || ''}</td>
+                        <td>$${row.BudgetAllocated || '0'}</td>
+                        <td>$${row.BudgetSpent || '0'}</td>
+                        <td>${row.TargetArrivalDate || ''}</td>
+                    </tr>`;
+                }
+            });
+            tbody.innerHTML = html;
+        },
+        error: function(err) {
+            document.getElementById("loading").innerText = "載入資料失敗，請檢查網路或 CSV 連結權限。";
+            console.error("CSV Parse Error:", err);
+        }
     });
-    var board = document.getElementById("board");
-    board.innerHTML = stages.map(function(stage){
-      var cards = CARDS.filter(function(c){ return c.stage===stage && (filter==="All"||c.region===filter); });
-      var total = cards.reduce(function(a,c){return a+c.count;},0);
-      var body = cards.length ? cards.map(cardHTML).join("") : '<div class="column-empty">No active batches</div>';
-      return '<div class="column">'+
-        '<div class="column-head"><div class="column-title">'+stage+'</div><div class="column-count">'+total+' pax · '+cards.length+' batch'+(cards.length===1?'':'es')+'</div></div>'+
-        '<div class="column-body">'+body+'</div>'+
-      '</div>';
-    }).join("");
-  }
-
-  function cardHTML(c){
-    var dl = new Date(c.deadline+"T00:00:00");
-    var d = daysBetween(dl, TODAY);
-    var dlText = d < 0 ? Math.abs(d)+"d overdue" : d===0 ? "Due today" : "Due in "+d+"d";
-    var pct = Math.round(c.spent/c.allocated*100);
-    var over = c.spent > c.allocated;
-    return '<div class="card status-'+c.status+'">'+
-      '<div class="card-top"><span class="region-pill '+c.region+'">'+c.region+'</span><span class="card-pax">'+c.count+' pax</span></div>'+
-      '<div class="card-title">'+c.stage+(c.region==="UAE"&&c.stage==="Entry"?" (UAE)":c.region!=="UAE"&&c.stage==="Entry"?" ("+c.region+")":"")+'</div>'+
-      '<div class="card-vendor">'+c.vendor+'</div>'+
-      '<div class="card-budget-row"><span>'+fmtUSD(c.spent)+' / '+fmtUSD(c.allocated)+'</span><span>'+pct+'%</span></div>'+
-      '<div class="mini-bar-track"><div class="mini-bar-fill'+(over?' over':'')+'" style="width:'+Math.min(pct,100)+'%"></div></div>'+
-      '<div class="card-deadline"><span>'+dlText+'</span><span class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</span></div>'+
-      (c.anomaly ? '<div class="anomaly-flag"><b>⚠ Anomaly —</b> '+c.note+'</div>' : '') +
-    '</div>';
-  }
-
-  var COMPETENCIES = [
-    { icon:"⚡", title:"Strategic Execution & Speed", metric:"122 → 3 regions, 60 days", body:"Full relocation across Singapore, Malaysia and the UAE inside a strict 2-month deadline, cutting the Time-to-Productiveness gap by 50% versus baseline onboarding." },
-    { icon:"🛡", title:"Compliance & Risk Mitigation", metric:"100% compliant · 0 penalties", body:"Full legal, visa (EP / Residence Card) and labor compliance sustained across three jurisdictions, with zero regulatory penalties incurred to date." },
-    { icon:"🔗", title:"Cross-Functional Governance", metric:"3 teams · 4 vendor categories", body:"Single coordination layer across HR, Legal and Finance internally, and lawyers, landlords, immigration agents and background-check vendors externally." },
-    { icon:"🤖", title:"Data-Driven Automation (PMO 2.0)", metric:"-40% admin overhead", body:"Python / SQL / Notion automation replaces manual status chasing — cutting administrative overhead and tracking costs by 40% across the program." }
-  ];
-
-  function renderCompetencies(){
-    document.getElementById("compGrid").innerHTML = COMPETENCIES.map(function(c){
-      return '<div class="comp-card">'+
-        '<div class="comp-card-head"><div class="comp-icon">'+c.icon+'</div><h3>'+c.title+'</h3></div>'+
-        '<div class="comp-metric">'+c.metric+'</div>'+
-        '<p>'+c.body+'</p>'+
-      '</div>';
-    }).join("");
-  }
-
-  var IMPACT = [
-    ["Time-to-Productiveness (new hire)", "46 days", "23 days", "-50%"],
-    ["PMO admin & tracking overhead / week", "62 hrs", "37 hrs", "-40%"],
-    ["Manual status reporting / region / week", "9 hrs", "Automated (real-time Notion sync)", "-100%"],
-    ["Compliance penalty incidents", "2–3 per cycle (benchmark)", "0", "Zero incidents"]
-  ];
-  function renderImpact(){
-    document.getElementById("impactBody").innerHTML = IMPACT.map(function(r){
-      return '<tr><td class="metric">'+r[0]+'</td><td class="num">'+r[1]+'</td><td class="num">'+r[2]+'</td><td class="improve">'+r[3]+'</td></tr>';
-    }).join("");
-  }
-
-  var CODE = {
-    compliance:
-'"""\n'+
-'GM-Robot :: compliance_check.py\n'+
-'Cross-checks HR + Lawyer feeds against statutory visa/labor deadlines.\n'+
-'Escalates breaches to Slack and syncs live status to Notion.\n'+
-'"""\n\n'+
-'import pandas as pd\n'+
-'from datetime import date\n'+
-'from notion_client import Client as NotionClient\n'+
-'from slack_sdk import WebClient as SlackClient\n\n'+
-'STAGE_SLA_DAYS = {\n'+
-'    "Entity Card Setup": 10,\n'+
-'    "Veremark Pending": 5,\n'+
-'    "Veremark Completed": 3,\n'+
-'    "EP / RC Submission": 7,\n'+
-'    "EP / RC Approval": 10,\n'+
-'}\n\n'+
-'notion = NotionClient(auth=SECRETS["NOTION_TOKEN"])\n'+
-'slack = SlackClient(token=SECRETS["SLACK_BOT_TOKEN"])\n\n\n'+
-'def load_source_feeds():\n'+
-'    """Merge HR roster, lawyer tracker, and Veremark export into one frame."""\n'+
-'    hr = pd.read_csv("feeds/hr_roster.csv")\n'+
-'    legal = pd.read_csv("feeds/lawyer_tracker.csv")\n'+
-'    veremark = pd.read_csv("feeds/veremark_export.csv")\n'+
-'    merged = hr.merge(legal, on="employee_id", how="left")\n'+
-'    merged = merged.merge(veremark, on="employee_id", how="left")\n'+
-'    return merged\n\n\n'+
-'def flag_breaches(df: pd.DataFrame) -> pd.DataFrame:\n'+
-'    """Mark any case that has exceeded its stage SLA."""\n'+
-'    today = date.today()\n'+
-'    df["days_in_stage"] = (today - pd.to_datetime(df["stage_entered_on"]).dt.date).dt.days\n'+
-'    df["sla_days"] = df["stage"].map(STAGE_SLA_DAYS)\n'+
-'    df["breach"] = df["days_in_stage"] > df["sla_days"]\n'+
-'    return df\n\n\n'+
-'def escalate(breaches: pd.DataFrame) -> None:\n'+
-'    for _, row in breaches.iterrows():\n'+
-'        message = (\n'+
-'            f":rotating_light: *{row[\'region\']}* — {row[\'employee_name\']} "\n'+
-'            f"stuck at *{row[\'stage\']}* for {row[\'days_in_stage\']}d "\n'+
-'            f"(SLA {row[\'sla_days\']}d). Owner: {row[\'vendor\']}"\n'+
-'        )\n'+
-'        slack.chat_postMessage(channel="#relocation-blitz-alerts", text=message)\n\n\n'+
-'def sync_to_notion(df: pd.DataFrame) -> None:\n'+
-'    for _, row in df.iterrows():\n'+
-'        notion.pages.update(\n'+
-'            page_id=row["notion_page_id"],\n'+
-'            properties={\n'+
-'                "Stage": {"select": {"name": row["stage"]}},\n'+
-'                "Compliance": {"select": {"name": "Breach" if row["breach"] else "OK"}},\n'+
-'            },\n'+
-'        )\n\n\n'+
-'def run() -> None:\n'+
-'    df = flag_breaches(load_source_feeds())\n'+
-'    escalate(df[df["breach"]])\n'+
-'    sync_to_notion(df)\n'+
-'    print(f"Checked {len(df)} cases — {df[\'breach\'].sum()} breach(es) escalated.")\n\n\n'+
-'if __name__ == "__main__":\n'+
-'    run()\n',
-
-    budget:
-'"""\n'+
-'GM-Robot :: budget_anomaly.py\n'+
-'Flags vendor spend that deviates from the allocated envelope per stage,\n'+
-'using a rolling z-score so one-off spikes don\'t trigger noisy alerts.\n'+
-'"""\n\n'+
-'import pandas as pd\n'+
-'from slack_sdk import WebClient as SlackClient\n\n'+
-'Z_THRESHOLD = 1.5\n'+
-'OVERSPEND_RATIO_THRESHOLD = 1.15  # 15% over allocation\n\n'+
-'slack = SlackClient(token=SECRETS["SLACK_BOT_TOKEN"])\n\n\n'+
-'def load_ledger() -> pd.DataFrame:\n'+
-'    """One row per (region, stage) budget tranche."""\n'+
-'    return pd.read_sql(\n'+
-'        "SELECT region, stage, allocated_usd, spent_usd, vendor FROM budget_ledger",\n'+
-'        con=DB_CONN,\n'+
-'    )\n\n\n'+
-'def compute_zscores(df: pd.DataFrame) -> pd.DataFrame:\n'+
-'    df["burn_ratio"] = df["spent_usd"] / df["allocated_usd"]\n'+
-'    mu, sigma = df["burn_ratio"].mean(), df["burn_ratio"].std(ddof=0)\n'+
-'    df["z_score"] = (df["burn_ratio"] - mu) / sigma\n'+
-'    return df\n\n\n'+
-'def flag_anomalies(df: pd.DataFrame) -> pd.DataFrame:\n'+
-'    df = compute_zscores(df)\n'+
-'    df["anomaly"] = (df["burn_ratio"] > OVERSPEND_RATIO_THRESHOLD) & (df["z_score"] > Z_THRESHOLD)\n'+
-'    return df\n\n\n'+
-'def notify(anomalies: pd.DataFrame) -> None:\n'+
-'    for _, row in anomalies.iterrows():\n'+
-'        pct = round((row["burn_ratio"] - 1) * 100)\n'+
-'        message = (\n'+
-'            f":money_with_wings: *Budget anomaly* — {row[\'region\']} / {row[\'stage\']} "\n'+
-'            f"is {pct}% over allocation (vendor: {row[\'vendor\']}, z={row[\'z_score\']:.2f})"\n'+
-'        )\n'+
-'        slack.chat_postMessage(channel="#relocation-blitz-alerts", text=message)\n\n\n'+
-'def run() -> None:\n'+
-'    ledger = load_ledger()\n'+
-'    flagged = flag_anomalies(ledger)\n'+
-'    anomalies = flagged[flagged["anomaly"]]\n'+
-'    notify(anomalies)\n'+
-'    print(f"Scanned {len(flagged)} tranches — {len(anomalies)} anomaly(ies) flagged.")\n\n\n'+
-'if __name__ == "__main__":\n'+
-'    run()\n'
-  };
-
-  function escapeHtml(s){
-    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  }
-  function highlightPython(code){
-    var lines = code.split("\n");
-    var kw = "def|return|if|elif|else|for|while|in|is|not|and|or|import|from|as|class|try|except|finally|with|raise|True|False|None|lambda|pass|break|continue|global|yield";
-    return lines.map(function(line){
-      var re = new RegExp("(#.*$)|(\"(?:[^\"\\\\]|\\\\.)*\"|'(?:[^'\\\\]|\\\\.)*')|\\b("+kw+")\\b|\\b(\\d+(?:\\.\\d+)?)\\b|\\b([A-Za-z_][A-Za-z0-9_]*)(?=\\()", "g");
-      var out = "", last = 0, m;
-      while((m = re.exec(line))){
-        out += escapeHtml(line.slice(last, m.index));
-        if(m[1]) out += '<span class="tok-c">'+escapeHtml(m[1])+'</span>';
-        else if(m[2]) out += '<span class="tok-s">'+escapeHtml(m[2])+'</span>';
-        else if(m[3]) out += '<span class="tok-k">'+escapeHtml(m[3])+'</span>';
-        else if(m[4]) out += '<span class="tok-n">'+escapeHtml(m[4])+'</span>';
-        else if(m[5]) out += '<span class="tok-f">'+escapeHtml(m[5])+'</span>';
-        last = re.lastIndex;
-      }
-      out += escapeHtml(line.slice(last));
-      return out || " ";
-    }).join("\n");
-  }
-
-  function renderCode(file){
-    document.getElementById("codeOutput").innerHTML = highlightPython(CODE[file]);
-  }
-
-  // ---- wiring ----
-  document.querySelectorAll(".tabbtn").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      document.querySelectorAll(".tabbtn").forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
-      document.querySelectorAll(".tabpanel").forEach(function(p){ p.classList.remove("active"); });
-      btn.classList.add("active"); btn.setAttribute("aria-selected","true");
-      document.getElementById("panel-"+btn.dataset.tab).classList.add("active");
-    });
-  });
-
-  document.getElementById("regionFilter").addEventListener("click", function(e){
-    var btn = e.target.closest("button[data-region]");
-    if(!btn) return;
-    document.querySelectorAll("#regionFilter button").forEach(function(b){ b.classList.remove("active"); });
-    btn.classList.add("active");
-    renderBoard(btn.dataset.region);
-  });
-
-  document.getElementById("codeTabs").addEventListener("click", function(e){
-    var btn = e.target.closest("button[data-file]");
-    if(!btn) return;
-    document.querySelectorAll(".code-tabbtn").forEach(function(b){ b.classList.remove("active"); });
-    btn.classList.add("active");
-    renderCode(btn.dataset.file);
-  });
-
-  document.querySelectorAll("[data-theme-btn]").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      document.querySelectorAll("[data-theme-btn]").forEach(function(b){ b.classList.remove("active"); });
-      btn.classList.add("active");
-      var mode = btn.dataset.themeBtn;
-      if(mode==="system") document.documentElement.removeAttribute("data-theme");
-      else document.documentElement.setAttribute("data-theme", mode);
-    });
-  });
-
-  renderKPIs();
-  renderBoard("All");
-  renderCompetencies();
-  renderImpact();
-  renderCode("compliance");
-})();
 </script>
 
-</body></html>
+</body>
+</html>
